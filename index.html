@@ -238,12 +238,29 @@
                     let row = document.createElement('div');
                     row.className = 'price-row';
                     row.innerHTML = `<div class="price-info"><h4>${item[0]}</h4></div><span style="color:#00E5FF; font-weight:800;">${item[1]}</span>`;
+                    
+                    // Added for multiple selections
+                    let itemStr = `${cat[0]} - ${item[0]} (${item[1]})`;
+                    row.setAttribute('data-item', itemStr);
+
                     row.onclick = function() {
-                        document.querySelectorAll('.price-row').forEach(r => r.classList.remove('selected'));
-                        row.classList.add('selected');
-                        curSel = `${cat[0]} - ${item[0]} (${item[1]})`;
-                        document.getElementById('selectionText').innerText = `ရွေးချယ်ထားမှု: ${curSel}`;
-                        document.getElementById('selectionText').style.color = "#ffffff";
+                        // Toggle multiple selection
+                        row.classList.toggle('selected');
+                        
+                        let selectedArr = [];
+                        document.querySelectorAll('.price-row.selected').forEach(r => {
+                            selectedArr.push(r.getAttribute('data-item'));
+                        });
+                        
+                        curSel = selectedArr.join(' + ');
+                        
+                        if (selectedArr.length > 0) {
+                            document.getElementById('selectionText').innerText = `ရွေးချယ်ထားမှု: ${curSel}`;
+                            document.getElementById('selectionText').style.color = "#ffffff";
+                        } else {
+                            document.getElementById('selectionText').innerText = "(ဝယ်ယူမည့်အမျိုးအစားကိုရွေးပါ)";
+                            document.getElementById('selectionText').style.color = "#00E5FF";
+                        }
                         updateLinks();
                     };
                     card.appendChild(row);
@@ -287,3 +304,4 @@
     </script>
 </body>
 </html>
+
