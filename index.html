@@ -212,7 +212,7 @@
 
     <script>
         const modal = document.getElementById('priceModal');
-        let curApp = ""; let curSel = "";
+        let curApp = ""; let curSel = ""; let curTotalStr = "";
 
         // Snow Effect
         for(let i=0; i<25; i++) {
@@ -224,7 +224,7 @@
 
         // Multiple categories function
         function openP(name, img, catData) {
-            curApp = name; curSel = "";
+            curApp = name; curSel = ""; curTotalStr = "";
             document.getElementById('detailName').innerText = name;
             document.getElementById('detailImg').src = img;
             const container = document.getElementById('modalPriceCategories');
@@ -269,11 +269,13 @@
                         
                         if (selectedArr.length > 0) {
                             let totalMsg = isUnknownPrice ? "Telegram မှာလာမေးပါ" : `${totalPrice.toLocaleString()} KS`;
+                            curTotalStr = totalMsg;
                             let neonHtml = `<div style="color: #00E5FF; text-shadow: 0 0 12px rgba(0, 229, 255, 1); font-size: 1.1rem; font-weight: 900; margin-top: 8px;">စုစုပေါင်း = ${totalMsg}</div>`;
                             
                             document.getElementById('selectionText').innerHTML = `ရွေးချယ်ထားမှု: ${curSel} ${neonHtml}`;
                             document.getElementById('selectionText').style.color = "#ffffff";
                         } else {
+                            curTotalStr = "";
                             document.getElementById('selectionText').innerHTML = "(ဝယ်ယူမည့်အမျိုးအစားကိုရွေးပါ)";
                             document.getElementById('selectionText').style.color = "#00E5FF";
                         }
@@ -299,7 +301,15 @@
         }
 
         function updateLinks() {
-            let msg = curSel ? `${curApp} ၏ ${curSel} ကို ဝယ်ယူလိုပါသည်၊၊` : `${curApp} စုံစမ်းလိုပါသည်၊၊`;
+            let msg = "";
+            if (curSel) {
+                msg = `${curApp} ၏ ${curSel} ကို ဝယ်ယူလိုပါသည်၊၊`;
+                if (curTotalStr && curTotalStr !== "Telegram မှာလာမေးပါ") {
+                    msg += `\nစုစုပေါင်းကျသင့်ငွေ = ${curTotalStr}`;
+                }
+            } else {
+                msg = `${curApp} စုံစမ်းလိုပါသည်၊၊`;
+            }
             document.getElementById('tgLink').href = `https://t.me/pulse_premium?text=${encodeURIComponent(msg)}`;
         }
 
@@ -320,4 +330,3 @@
     </script>
 </body>
 </html>
-
