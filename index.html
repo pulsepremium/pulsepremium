@@ -52,7 +52,7 @@
 </head>
 <body>
     <div class="snowarea" id="snowArea"></div>
-    <header><div class="site-title">PULSE PREMIUM</div><div class="search-container">🔍<input type="text" id="searchInput" placeholder="Search 54 apps..." oninput="filterProducts()"></div></header>
+    <header><div class="site-title">PULSE PREMIUM</div><div class="search-container">🔍<input type="text" id="searchInput" placeholder="Search 58 apps..." oninput="filterProducts()"></div></header>
     <div class="welcome-msg">စျေးသက်သာပြီး လိုချင်တာတွေကို တစ်နေရာတည်းမှာ ဝယ်ချင်ရင်တော့ <span style="color:#00E5FF; font-weight:bold;">Pulse Premium</span> ကိုသာ လာခဲ့လိုက်ပါ။</div>
     <a href="https://t.me/pulsepremium_gp" target="_blank" class="join-float">Join Telegram</a>
     
@@ -65,7 +65,13 @@
             <div class="product-card" onclick="openP('HMA VPN','hma.png', [['VPN', [['1M Private', '13000 KS']]]])"><div class="icon-box"><img src="hma.png"></div><h3>HMA VPN</h3></div>
         </div>
 
-        <h2 class="category-title">၂။ Editing Apps</h2>
+        <h2 class="category-title">၂။ DATA</h2>
+        <div class="product-grid">
+            <div class="product-card" onclick="openP('ATOM DATA','atom.png', [['ဒေတာ', [['1GB (၁လ)', '1500 KS'], ['15GB+1000onnet+50min any', '12000 KS'], ['25GB+3000onnet+200min any', '22000 KS']]], ['ဖုန်းပြော', [['Anynet 100', '1200 KS'], ['Anynet 150 (3လ)', '1500 KS'], ['Anynet 300 (3လ)', '2500 KS']]], ['Point', [['Atom Point 500', '900 KS']]]])"><div class="icon-box"><img src="atom.png"></div><h3>ATOM DATA</h3></div>
+            <div class="product-card" onclick="openP('MYTEL DATA','mytel.png', [['ဒေတာ', [['1GB', '1300 KS'], ['14GB+1050min onnet', '15500 KS'], ['22Gb+8000min onnet +5000sms', '16600 KS'], ['40Gb+250 onnet+25any', '21000 KS'], ['120GB', '32000 KS']]]])"><div class="icon-box"><img src="mytel.png"></div><h3>MYTEL DATA</h3></div>
+        </div>
+
+        <h2 class="category-title">၃။ Editing Apps</h2>
         <div class="product-grid">
             <div class="product-card" onclick="openP('CapCut','cap.png', [['Premium', [['1M Share', '8000 KS'], ['1M Private', '15000 KS']]]])"><div class="icon-box"><img src="cap.png"></div><h3>CapCut</h3></div>
             <div class="product-card" onclick="openP('Alight Motion','alight.png', [['Premium', [['1Y Share', '8000 KS'], ['1Y Private', '11000 KS']]]])"><div class="icon-box"><img src="alight.png"></div><h3>Alight Motion</h3></div>
@@ -79,12 +85,12 @@
             <div class="product-card" onclick="openP('INSHOT','inshot.png', [['Lifetime', [['Premium', '15000 KS']]]])"><div class="icon-box"><img src="inshot.png"></div><h3>INSHOT</h3></div>
         </div>
 
-        <h2 class="category-title">၃။ APPLE ID RENTAL</h2>
+        <h2 class="category-title">၄။ APPLE ID RENTAL</h2>
         <div class="product-grid">
             <div class="product-card" onclick="openP('Apple ID 300+','apple.png', [['Rental', [['Private Rental', '8000 KS']]]])"><div class="icon-box"><img src="apple.png"></div><h3>Apple ID 300+</h3></div>
         </div>
 
-        <h2 class="category-title">၄။ AI</h2>
+        <h2 class="category-title">၅။ AI</h2>
         <div class="product-grid">
             <div class="product-card" onclick="openP('ChatGPT Plus','chat.png', [['Premium', [['Personal 1M', '15000 KS'], ['Business', '30000 KS']]]])"><div class="icon-box"><img src="chat.png"></div><h3>ChatGPT</h3></div>
             <div class="product-card" onclick="openP('Gemini Pro','gem.png', [['AI', [['Invite 1M', '8000 KS'], ['Private 3M+2TB', '15000 KS']]]])"><div class="icon-box"><img src="gem.png"></div><h3>Gemini</h3></div>
@@ -94,7 +100,7 @@
             <div class="product-card" onclick="openP('NotebookLM','note.png', [['AI', [['3M Invite', '13000 KS']]]])"><div class="icon-box"><img src="note.png"></div><h3>NotebookLM</h3></div>
         </div>
 
-        <h2 class="category-title">၅။ Streaming Apps</h2>
+        <h2 class="category-title">၆။ Streaming Apps</h2>
         <div class="product-grid">
             <div class="product-card" onclick="openProduct('Netflix','net.png', [['Plan', 'Telegram မှာလာမေးပါ']])"><div class="icon-box"><img src="net.png"></div><h3>Netflix</h3></div>
             <div class="product-card" onclick="openP('Prime Video','prime.png', [['Movie', [['Share 1M', '8500 KS'], ['Private 1M', '12500 KS']]]])"><div class="icon-box"><img src="prime.png"></div><h3>Prime Video</h3></div>
@@ -109,7 +115,7 @@
             <div class="product-card" onclick="openOut('HBO Max')"><div class="icon-box"><img src="hbo.png"></div><h3>HBO Max</h3></div>
         </div>
 
-        <h2 class="category-title">၆။ Education</h2>
+        <h2 class="category-title">၇။ Education</h2>
         <div class="product-grid">
             <div class="product-card" onclick="openP('TradingView','tv.png', [['Stock', [['Private 1M', '30000 KS']]]])"><div class="icon-box"><img src="tv.png"></div><h3>TradingView</h3></div>
             <div class="product-card" onclick="openP('Duolingo','duo.png', [['Head', [['Head 14D', '8000 KS'], ['Head 1M', '13000 KS']]]])"><div class="icon-box"><img src="duo.png"></div><h3>Duolingo</h3></div>
@@ -118,7 +124,7 @@
             <div class="product-card" onclick="openP('Wattpad','watt.png', [['Novel', [['1M Premium', '6000 KS'], ['1Y Premium', '25000 KS']]]])"><div class="icon-box"><img src="watt.png"></div><h3>Wattpad</h3></div>
         </div>
 
-        <h2 class="category-title">၇။ Cloud Storage</h2>
+        <h2 class="category-title">၈။ Cloud Storage</h2>
         <div class="product-grid">
             <div class="product-card" onclick="openP('Google Drive','gd.png', [['Cloud', [['Lifetime 1000GB', '40000 KS']]]])"><div class="icon-box"><img src="gd.png"></div><h3>Google Drive</h3></div>
             <div class="product-card" onclick="openP('TeraBox','tera.png', [['Cloud', [['1 Year (2TB)', '20000 KS']]]])"><div class="icon-box"><img src="tera.png"></div><h3>TeraBox</h3></div>
@@ -126,7 +132,7 @@
             <div class="product-card" onclick="openOut('iCloud')"><div class="icon-box"><img src="icloud.png"></div><h3>iCloud</h3></div>
         </div>
 
-        <h2 class="category-title">၈။ Boosting Service</h2>
+        <h2 class="category-title">၉။ Boosting Service</h2>
         <div class="product-grid">
             <div class="product-card" onclick="openP('Facebook Boosting','fb.png', [
                 ['Video Views (LT Refill)', [['1k Views', '4000 KS'], ['10k Views', '7500 KS'], ['100k Views', '43000 KS'], ['1M Views', '393000 KS']]],
@@ -160,29 +166,29 @@
             <div class="product-card" onclick="openProduct('TikTok Offi','tt.png', [['Offi', 'Telegram မှာလာမေးပါ']])"><div class="icon-box"><img src="tt.png"></div><h3>TikTok Offi</h3></div>
         </div>
 
-        <h2 class="category-title">၉။ Communication</h2>
+        <h2 class="category-title">၁၀။ Communication</h2>
         <div class="product-grid">
             <div class="product-card" onclick="openP('Telegram Premium','tgp.png', [
                 ['Login Plan', [['1 Month', '23000 KS'], ['1 Year', '114000 KS']]],
                 ['Gift Plan', [['3 Months', '60500 KS'], ['6 Months', '78500 KS'], ['12 Months', '140000 KS']]],
                 ['Link Plan', [['3 Months', '51500 KS'], ['6 Months', '70500 KS'], ['12 Months', '126000 KS']]]
             ])"><div class="icon-box"><img src="tgp.png"></div><h3>TG Premium</h3></div>
-            <div class="product-card" onclick="openProduct('TG Star','tgs.png', [['Pack', 'Telegram မှာလာမေးပါ']])"><div class="icon-box"><img src="tgs.png"></div><h3>TG Star</h3></div>
+            <div class="product-card" onclick="openP('TG Star','tgs.png', [['Stars', [['50 Stars', '3800 KS'], ['100 Stars', '7600 KS'], ['150 Stars', '11500 KS'], ['200 Stars', '15200 KS'], ['250 Stars', '19000 KS'], ['300 Stars', '22800 KS'], ['350 Stars', '26600 KS'], ['400 Stars', '30400 KS'], ['450 Stars', '34200 KS'], ['500 Stars', '38000 KS'], ['550 Stars', '41800 KS'], ['600 Stars', '45600 KS'], ['650 Stars', '49400 KS'], ['700 Stars', '53200 KS'], ['750 Stars', '57000 KS'], ['800 Stars', '60800 KS'], ['850 Stars', '64600 KS'], ['900 Stars', '68400 KS'], ['950 Stars', '72200 KS'], ['1000 Stars', '76000 KS']]]])"><div class="icon-box"><img src="tgs.png"></div><h3>TG Star</h3></div>
             <div class="product-card" onclick="openP('Discord','dc.png', [['Nitro', [['Nitro Key 1M', '35000 KS']]]])"><div class="icon-box"><img src="dc.png"></div><h3>Discord</h3></div>
         </div>
 
-        <h2 class="category-title">၁၀။ Windows & Microsoft</h2>
+        <h2 class="category-title">၁၁။ Windows & Microsoft</h2>
         <div class="product-grid">
             <div class="product-card" onclick="openP('Windows Lic','win.png', [['Pro', [['Win 10/11 Pro', '18000 KS']]]])"><div class="icon-box"><img src="win.png"></div><h3>Windows Lic</h3></div>
             <div class="product-card" onclick="openP('MS 365','m365.png', [['Office', [['Private 1 Month', '13000 KS']]]])"><div class="icon-box"><img src="m365.png"></div><h3>MS 365</h3></div>
         </div>
 
-        <h2 class="category-title">၁၁။ Social & Dating</h2>
+        <h2 class="category-title">၁၂။ Social & Dating</h2>
         <div class="product-grid">
             <div class="product-card" onclick="openOut('Tinder')"><div class="icon-box"><img src="tinder.png"></div><h3>Tinder</h3></div>
         </div>
 
-        <h2 class="category-title">၁၂။ Gift Cards</h2>
+        <h2 class="category-title">၁၃။ Gift Cards</h2>
         <div class="product-grid">
             <div class="product-card" onclick="openP('PlaySafeCard','ps.png', [['Gift', [['1 Card', '3000 KS']]]])"><div class="icon-box"><img src="ps.png"></div><h3>PlaySafeCard</h3></div>
             <div class="product-card" onclick="openProduct('GPlay Card','gpc.png', [['Gift', 'Telegram မှာလာမေးပါ']])"><div class="icon-box"><img src="gpc.png"></div><h3>GPlay Card</h3></div>
