@@ -239,26 +239,42 @@
                     row.className = 'price-row';
                     row.innerHTML = `<div class="price-info"><h4>${item[0]}</h4></div><span style="color:#00E5FF; font-weight:800;">${item[1]}</span>`;
                     
-                    // Added for multiple selections
+                    // Setup data for multiple selections and sum calculation
                     let itemStr = `${cat[0]} - ${item[0]} (${item[1]})`;
                     row.setAttribute('data-item', itemStr);
+                    
+                    // Extract numbers from price string (e.g., "30000 KS" -> 30000)
+                    let itemPriceStr = item[1].replace(/[^0-9]/g, '');
+                    row.setAttribute('data-price', itemPriceStr);
 
                     row.onclick = function() {
                         // Toggle multiple selection
                         row.classList.toggle('selected');
                         
                         let selectedArr = [];
+                        let totalPrice = 0;
+                        let isUnknownPrice = false;
+
                         document.querySelectorAll('.price-row.selected').forEach(r => {
                             selectedArr.push(r.getAttribute('data-item'));
+                            let p = r.getAttribute('data-price');
+                            if(p !== "") {
+                                totalPrice += parseInt(p);
+                            } else {
+                                isUnknownPrice = true;
+                            }
                         });
                         
                         curSel = selectedArr.join(' + ');
                         
                         if (selectedArr.length > 0) {
-                            document.getElementById('selectionText').innerText = `ရွေးချယ်ထားမှု: ${curSel}`;
+                            let totalMsg = isUnknownPrice ? "Telegram မှာလာမေးပါ" : `${totalPrice.toLocaleString()} KS`;
+                            let neonHtml = `<div style="color: #00E5FF; text-shadow: 0 0 12px rgba(0, 229, 255, 1); font-size: 1.1rem; font-weight: 900; margin-top: 8px;">စုစုပေါင်း = ${totalMsg}</div>`;
+                            
+                            document.getElementById('selectionText').innerHTML = `ရွေးချယ်ထားမှု: ${curSel} ${neonHtml}`;
                             document.getElementById('selectionText').style.color = "#ffffff";
                         } else {
-                            document.getElementById('selectionText').innerText = "(ဝယ်ယူမည့်အမျိုးအစားကိုရွေးပါ)";
+                            document.getElementById('selectionText').innerHTML = "(ဝယ်ယူမည့်အမျိုးအစားကိုရွေးပါ)";
                             document.getElementById('selectionText').style.color = "#00E5FF";
                         }
                         updateLinks();
@@ -304,3 +320,4 @@
     </script>
 </body>
 </html>
+
