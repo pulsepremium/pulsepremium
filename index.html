@@ -6,54 +6,54 @@
     <title>PULSE Premium Store</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background-color: #1e252b; color: #ffffff; min-height: 100vh; position: relative; overflow-x: hidden; }
+        body { background-color: #111111; color: #ffffff; min-height: 100vh; position: relative; overflow-x: hidden; }
         .snowarea { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; filter: blur(2px); }
-        .snowflake { color: rgba(255, 255, 255, 0.4); font-size: 1.2em; position: absolute; top: -10%; animation: fall 10s linear infinite, shake 3s ease-in-out infinite; }
+        .snowflake { color: rgba(212, 175, 55, 0.3); font-size: 1.2em; position: absolute; top: -10%; animation: fall 10s linear infinite, shake 3s ease-in-out infinite; }
         @keyframes fall { 0% { top: -10%; } 100% { top: 100%; } }
         @keyframes shake { 0%, 100% { transform: translateX(0px); } 50% { transform: translateX(30px); } }
-        header { position: sticky; top: 0; background: rgba(30, 37, 43, 0.98); backdrop-filter: blur(12px); padding: 15px 20px; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: center; }
-        .site-title { font-size: 1.6rem; font-weight: 800; color: #00E5FF; text-shadow: 0 0 15px rgba(0, 229, 255, 0.4); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
-        .search-container { display: flex; align-items: center; background: #161a1e; border-radius: 12px; padding: 10px 15px; border: 1px solid rgba(255,255,255,0.1); max-width: 500px; margin: 0 auto; }
+        header { position: sticky; top: 0; background: rgba(17, 17, 17, 0.98); backdrop-filter: blur(12px); padding: 15px 20px; z-index: 100; border-bottom: 1px solid rgba(212,175,55,0.1); text-align: center; }
+        .site-title { font-size: 1.6rem; font-weight: 800; color: #D4AF37; text-shadow: 0 0 15px rgba(212, 175, 55, 0.4); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        .search-container { display: flex; align-items: center; background: #0a0a0a; border-radius: 12px; padding: 10px 15px; border: 1px solid rgba(255,255,255,0.05); max-width: 500px; margin: 0 auto; }
         .search-container input { background: transparent; border: none; color: #fff; width: 100%; outline: none; margin-left: 10px; font-size: 0.95rem; }
-        .welcome-msg { max-width: 500px; margin: 20px auto 5px auto; text-align: center; padding: 0 25px; font-size: 0.82rem; line-height: 1.5; color: #b0bec5; }
+        .welcome-msg { max-width: 500px; margin: 20px auto 5px auto; text-align: center; padding: 0 25px; font-size: 0.82rem; line-height: 1.5; color: #999999; }
         main { padding: 10px 20px; position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding-bottom: 90px; }
-        .category-title { font-size: 0.85rem; color: #00E5FF; text-transform: uppercase; margin: 25px 0 15px 0; font-weight: 700; border-left: 4px solid #00E5FF; padding-left: 12px; letter-spacing: 1.5px; }
+        .category-title { font-size: 0.85rem; color: #D4AF37; text-transform: uppercase; margin: 25px 0 15px 0; font-weight: 700; border-left: 4px solid #D4AF37; padding-left: 12px; letter-spacing: 1.5px; }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 15px 10px; justify-content: center; justify-items: center; }
         .product-card { text-align: center; cursor: pointer; transition: 0.2s; width: 90px; border-radius: 15px; padding: 5px; }
-        .product-card:active { transform: scale(0.92); box-shadow: 0 0 15px #00E5FF; background: rgba(0, 229, 255, 0.1); }
-        .icon-box { background-color: #252d35; border-radius: 22px; padding: 12px; width: 82px; height: 82px; margin: 0 auto 8px auto; border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .product-card:active { transform: scale(0.92); box-shadow: 0 0 15px #D4AF37; background: rgba(212, 175, 55, 0.1); }
+        .icon-box { background-color: #1f1f1f; border-radius: 22px; padding: 12px; width: 82px; height: 82px; margin: 0 auto 8px auto; border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; overflow: hidden; }
         .icon-box img { width: 100%; height: 100%; object-fit: contain; border-radius: 10px; }
         .product-card h3 { font-size: 0.65rem; color: #E0E0E0; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; }
-        .join-float { position: fixed; bottom: 25px; right: 20px; background: #00E5FF; color: #1e252b !important; padding: 12px 22px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.85rem; box-shadow: 0 10px 25px rgba(0, 229, 255, 0.4); z-index: 2000; transition: 0.3s; display: inline-block; text-align: center; }
+        .join-float { position: fixed; bottom: 25px; right: 20px; background: linear-gradient(135deg, #D4AF37, #B5952F); color: #111111 !important; padding: 12px 22px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 0.85rem; box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4); z-index: 2000; transition: 0.3s; display: inline-block; text-align: center; }
         
         /* Modal Style - Fixed Logo Centering */
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); z-index: 3000; overflow-y: auto; }
-        .modal-content { width: 95%; max-width: 450px; margin: 40px auto; padding: 30px 15px; background: #1e252b; border-radius: 35px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 30px 60px rgba(0,0,0,0.6); opacity: 0; transform: translateY(20px); transition: 0.3s ease-out; display: flex; flex-direction: column; align-items: center; }
+        .modal-content { width: 95%; max-width: 450px; margin: 40px auto; padding: 30px 15px; background: #111111; border-radius: 35px; border: 1px solid rgba(212,175,55,0.2); box-shadow: 0 30px 60px rgba(0,0,0,0.8); opacity: 0; transform: translateY(20px); transition: 0.3s ease-out; display: flex; flex-direction: column; align-items: center; }
         .modal-overlay.open .modal-content { opacity: 1; transform: translateY(0); }
-        .back-btn { background: #252d35; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 18px; border-radius: 50px; font-size: 0.8rem; cursor: pointer; align-self: flex-start; margin-bottom: 15px; }
+        .back-btn { background: #1f1f1f; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 18px; border-radius: 50px; font-size: 0.8rem; cursor: pointer; align-self: flex-start; margin-bottom: 15px; }
         
-        .app-main-icon { width: 110px; height: 110px; border-radius: 28px; border: 3px solid rgba(0,229,255,0.2); box-shadow: 0 15px 35px rgba(0,0,0,0.4); margin: 0 auto 15px auto; display: block; }
+        .app-main-icon { width: 110px; height: 110px; border-radius: 28px; border: 3px solid rgba(212,175,55,0.3); box-shadow: 0 15px 35px rgba(0,0,0,0.4); margin: 0 auto 15px auto; display: block; }
         .app-name-large { font-size: 1.5rem; font-weight: 800; margin-bottom: 5px; color: #fff; text-align: center; }
-        .selection-instruction { font-size: 0.65rem; color: #00E5FF; margin-bottom: 25px; font-weight: 500; text-align: center; }
+        .selection-instruction { font-size: 0.65rem; color: #D4AF37; margin-bottom: 25px; font-weight: 500; text-align: center; }
         
-        .price-category-card { background: #161a1e; border-radius: 22px; padding: 15px; margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.03); text-align: left; width: 100%; }
-        .price-category-title { color: #8a9bb1; font-size: 0.75rem; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; border-left: 3px solid #00E5FF; padding-left: 8px; }
-        .price-row { display: flex; justify-content: space-between; align-items: center; background: #252d35; padding: 15px; border-radius: 12px; margin-bottom: 8px; border: 2px solid transparent; cursor: pointer; transition: 0.3s; }
-        .price-row.selected { border-color: #00E5FF; background: rgba(0, 229, 255, 0.15); }
+        .price-category-card { background: #0a0a0a; border-radius: 22px; padding: 15px; margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.03); text-align: left; width: 100%; }
+        .price-category-title { color: #999999; font-size: 0.75rem; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; border-left: 3px solid #D4AF37; padding-left: 8px; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; background: #1f1f1f; padding: 15px; border-radius: 12px; margin-bottom: 8px; border: 2px solid transparent; cursor: pointer; transition: 0.3s; }
+        .price-row.selected { border-color: #D4AF37; background: rgba(212, 175, 55, 0.15); }
         .price-info h4 { font-size: 0.85rem; color: #fff; margin-bottom: 2px; }
-        .price-info span { font-size: 1.2rem; color: #00E5FF; font-weight: 800; display: block; }
+        .price-info span { font-size: 1.2rem; color: #D4AF37; font-weight: 800; display: block; }
         
         .button-group { display: flex; flex-direction: column; gap: 10px; width: 100%; align-items: center; margin-top: 10px; }
         .buy-btn { color: #fff; padding: 12px 20px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; transition: 0.3s; width: 85%; max-width: 250px; text-transform: uppercase; border: none; }
         .btn-tg { background: #0088cc; }
         .btn-tt { background: #010101; border: 1px solid #fe2c55; }
-        .out-stock-btn { background: #3c444d !important; color: #8a9bb1 !important; cursor: not-allowed; pointer-events: none; }
+        .out-stock-btn { background: #333333 !important; color: #999999 !important; cursor: not-allowed; pointer-events: none; }
     </style>
 </head>
 <body>
     <div class="snowarea" id="snowArea"></div>
     <header><div class="site-title">PULSE PREMIUM</div><div class="search-container">🔍<input type="text" id="searchInput" placeholder="Search 58 apps..." oninput="filterProducts()"></div></header>
-    <div class="welcome-msg">စျေးသက်သာပြီး လိုချင်တာတွေကို တစ်နေရာတည်းမှာ ဝယ်ချင်ရင်တော့ <span style="color:#00E5FF; font-weight:bold;">Pulse Premium</span> ကိုသာ လာခဲ့လိုက်ပါ။</div>
+    <div class="welcome-msg">စျေးသက်သာပြီး လိုချင်တာတွေကို တစ်နေရာတည်းမှာ ဝယ်ချင်ရင်တော့ <span style="color:#D4AF37; font-weight:bold;">Pulse Premium</span> ကိုသာ လာခဲ့လိုက်ပါ။</div>
     <a href="https://t.me/pulsepremiumservice" target="_blank" class="join-float">Join Telegram</a>
     
     <main id="mainContent">
@@ -85,7 +85,6 @@
             <div class="product-card" onclick="openP('Remini','rem.png', [['Premium', [['Private 1Week', '11000 KS']]]])"><div class="icon-box"><img src="rem.png"></div><h3>Remini</h3></div>
             <div class="product-card" onclick="openP('INSHOT','inshot.png', [['Lifetime', [['Premium', '25000 KS']]]])"><div class="icon-box"><img src="inshot.png"></div><h3>INSHOT</h3></div>
         </div>
-
 
         <h2 class="category-title">4။ AI</h2>
         <div class="product-grid">
@@ -189,7 +188,7 @@
                 cat[1].forEach(item => {
                     let row = document.createElement('div');
                     row.className = 'price-row';
-                    row.innerHTML = `<div class="price-info"><h4>${item[0]}</h4></div><span style="color:#00E5FF; font-weight:800;">${item[1]}</span>`;
+                    row.innerHTML = `<div class="price-info"><h4>${item[0]}</h4></div><span style="color:#D4AF37; font-weight:800;">${item[1]}</span>`;
                     
                     // Setup data for multiple selections and sum calculation
                     let itemStr = `${cat[0]} - ${item[0]} (${item[1]})`;
@@ -222,14 +221,14 @@
                         if (selectedArr.length > 0) {
                             let totalMsg = isUnknownPrice ? "Telegram မှာလာမေးပါ" : `${totalPrice.toLocaleString()} KS`;
                             curTotalStr = totalMsg;
-                            let neonHtml = `<div style="color: #00E5FF; text-shadow: 0 0 12px rgba(0, 229, 255, 1); font-size: 1.1rem; font-weight: 900; margin-top: 8px;">စုစုပေါင်း = ${totalMsg}</div>`;
+                            let neonHtml = `<div style="color: #D4AF37; text-shadow: 0 0 12px rgba(212, 175, 55, 0.8); font-size: 1.1rem; font-weight: 900; margin-top: 8px;">စုစုပေါင်း = ${totalMsg}</div>`;
                             
                             document.getElementById('selectionText').innerHTML = `ရွေးချယ်ထားမှု: ${curSel} ${neonHtml}`;
                             document.getElementById('selectionText').style.color = "#ffffff";
                         } else {
                             curTotalStr = "";
                             document.getElementById('selectionText').innerHTML = "(ဝယ်ယူမည့်အမျိုးအစားကိုရွေးပါ)";
-                            document.getElementById('selectionText').style.color = "#00E5FF";
+                            document.getElementById('selectionText').style.color = "#D4AF37";
                         }
                         updateLinks();
                     };
@@ -238,7 +237,7 @@
                 container.appendChild(card);
             });
             document.getElementById('selectionText').innerText = "(ဝယ်ယူမည့်အမျိုးအစားကိုရွေးပါ)";
-            document.getElementById('selectionText').style.color = "#00E5FF";
+            document.getElementById('selectionText').style.color = "#D4AF37";
             updateLinks();
             modal.style.display = 'block'; setTimeout(() => modal.classList.add('open'), 10);
         }
@@ -282,4 +281,3 @@
     </script>
 </body>
 </html>
-            
